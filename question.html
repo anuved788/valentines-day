@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Be My Valentine</title>
+
+<style>
+body{
+  margin:0;
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:linear-gradient(135deg,#fbc2eb,#fad0c4,#ff9a9e);
+  font-family: Arial, sans-serif;
+  overflow:hidden;
+}
+
+.card{
+  background:white;
+  padding:35px;
+  border-radius:24px;
+  text-align:center;
+  width:90%;
+  max-width:340px;
+  box-shadow:0 15px 30px rgba(0,0,0,0.25);
+}
+
+h1{
+  font-size:22px;
+  margin-bottom:25px;
+}
+
+.buttons{
+  position:relative;
+  height:80px;
+}
+
+button{
+  font-size:18px;
+  padding:12px 30px;
+  border:none;
+  border-radius:30px;
+  cursor:pointer;
+  color:white;
+  position:absolute;
+}
+
+#yes{
+  background:#e63946;
+  left:30px;
+}
+
+#no{
+  background:#6c757d;
+  right:30px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+  <h1>Anirudh,<br>will you be my Valentine?</h1>
+
+  <div class="buttons">
+    <button id="yes" onclick="yesClick()">YES</button>
+    <button id="no" onclick="moveNo()">NO</button>
+  </div>
+</div>
+
+<script>
+function yesClick(){
+  window.location.href = "final.html";
+}
+
+function moveNo(){
+  const noBtn = document.getElementById("no");
+  const maxX = window.innerWidth - 120;
+  const maxY = window.innerHeight - 120;
+
+  const x = Math.random() * maxX;
+  const y = Math.random() * maxY;
+
+  noBtn.style.left = x + "px";
+  noBtn.style.top = y + "px";
+}
+</script>
+
+</body>
+</html>
