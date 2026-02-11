@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Happy Valentine’s Day ❤️</title>
+
+<style>
+body{
+  margin:0;
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:linear-gradient(135deg,#ff9a9e,#fad0c4);
+  font-family: "Segoe UI", Arial, sans-serif;
+  overflow:hidden;
+}
+
+/* floating hearts */
+.heart{
+  position:absolute;
+  color:rgba(255,255,255,0.7);
+  font-size:22px;
+  animation: float 6s linear infinite;
+}
+
+@keyframes float{
+  0%{ transform:translateY(100vh); opacity:0; }
+  20%{ opacity:1; }
+  100%{ transform:translateY(-10vh); opacity:0; }
+}
+
+.card{
+  background:white;
+  padding:30px 28px;
+  border-radius:22px;
+  width:300px;
+  text-align:center;
+  box-shadow:0 15px 35px rgba(0,0,0,0.25);
+  z-index:2;
+}
+
+h1{
+  margin:0;
+  font-size:24px;
+}
+
+p{
+  font-size:15px;
+  color:#444;
+  margin:12px 0;
+}
+
+img{
+  width:100%;
+  border-radius:16px;
+  margin:15px 0;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- floating hearts -->
+<span class="heart" style="left:10%;animation-delay:0s;">❤️</span>
+<span class="heart" style="left:30%;animation-delay:2s;">💖</span>
+<span class="heart" style="left:50%;animation-delay:1s;">💕</span>
+<span class="heart" style="left:70%;animation-delay:3s;">💗</span>
+<span class="heart" style="left:90%;animation-delay:4s;">❤️</span>
+
+<div class="card">
+  <h1>Happy Valentine’s Day ❤️</h1>
+
+  <p>
+    My lovely husband Anirudh — always my favorite 😘
+  </p>
+
+  <img src="disco.gif" alt="Office Disco Dance">
+
+  <p>
+    I’m not easy to handle,<br>
+    but I am cute —<br>
+    so it kind of balances out 😜
+  </p>
+</div>
+
+</body>
+</html>
