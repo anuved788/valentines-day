@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Question ❤️</title>
+
+<style>
+body{
+  margin:0;
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:linear-gradient(135deg,#ff9a9e,#fad0c4);
+  font-family:'Segoe UI', Arial, sans-serif;
+  overflow:hidden;
+}
+
+/* floating */
+.float{
+  position:absolute;
+  bottom:-30px;
+  font-size:22px;
+  opacity:0.8;
+  animation:floatUp 8s linear infinite;
+}
+@keyframes floatUp{
+  0%{transform:translateY(0);opacity:0;}
+  20%{opacity:1;}
+  100%{transform:translateY(-120vh);opacity:0;}
+}
+
+.card{
+  background:white;
+  padding:30px;
+  border-radius:24px;
+  text-align:center;
+  width:320px;
+  box-shadow:0 20px 40px rgba(0,0,0,0.25);
+  z-index:1;
+}
+
+.card img{
+  width:100%;
+  border-radius:18px;
+  margin-bottom:14px;
+}
+
+.matter{
+  font-size:16px;
+  color:#444;
+  margin-bottom:18px;
+}
+
+h1{
+  font-size:22px;
+  color:#e63946;
+  margin-bottom:24px;
+}
+
+.buttons{
+  position:relative;
+  height:90px;
+}
+
+button{
+  padding:10px 26px;
+  font-size:16px;
+  border:none;
+  border-radius:25px;
+  cursor:pointer;
+}
+
+#yes{
+  background:#e63946;
+  color:white;
+}
+
+#no{
+  background:#adb5bd;
+  position:absolute;
+  left:140px;
+}
+</style>
+</head>
+
+<body>
+
+<span class="float" style="left:10%">❤️</span>
+<span class="float" style="left:25%;animation-delay:2s">🌹</span>
+<span class="float" style="left:40%;animation-delay:4s">💖</span>
+<span class="float" style="left:60%;animation-delay:1s">💕</span>
+<span class="float" style="left:80%;animation-delay:3s">🌸</span>
+
+<div class="card">
+
+  <img src="question.jpg" alt="Question">
+
+  <div class="matter">
+    I just want to ask you something from my heart 💗
+  </div>
+
+  <h1>Anirudh,<br>will you be my Valentine? ❤️</h1>
+
+  <div class="buttons">
+    <button id="yes" onclick="go()">Yes 😍</button>
+    <button id="no">No 🙈</button>
+  </div>
+</div>
+
+<script>
+const noBtn=document.getElementById("no");
+noBtn.addEventListener("mouseenter",move);
+noBtn.addEventListener("touchstart",move);
+
+function move(){
+  noBtn.style.left=Math.random()*180+"px";
+  noBtn.style.top=Math.random()*60+"px";
+}
+function go(){
+  window.location.href="final_v2.html";
+}
+</script>
+
+</body>
+</html>
