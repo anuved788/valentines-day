@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Question 💖</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Comic Sans MS', cursive;
+    }
+
+    body {
+      min-height: 100vh;
+      background: linear-gradient(to bottom, #ffd1dc, #ffe6ee);
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Balloons */
+    .balloon {
+      position: absolute;
+      bottom: -120px;
+      width: 55px;
+      height: 75px;
+      border-radius: 50%;
+      opacity: 0.7;
+      animation: float 10s infinite linear;
+    }
+
+    .balloon::after {
+      content: "";
+      position: absolute;
+      width: 2px;
+      height: 35px;
+      background: #aaa;
+      left: 50%;
+      top: 75px;
+    }
+
+    .pink { background: #ffb6c1; }
+    .red { background: #ff6b6b; }
+
+    @keyframes float {
+      from { transform: translateY(0); }
+      to { transform: translateY(-120vh); }
+    }
+
+    /* Card */
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      max-width: 330px;
+      text-align: center;
+      z-index: 10;
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 15px;
+      margin-bottom: 15px;
+    }
+
+    h2 {
+      color: #e6005c;
+      margin-bottom: 8px;
+    }
+
+    p {
+      color: #555;
+      font-size: 15px;
+      margin-bottom: 15px;
+    }
+
+    /* Buttons */
+    .buttons {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      margin-top: 15px;
+    }
+
+    button {
+      flex: 1;
+      padding: 12px;
+      border: none;
+      border-radius: 25px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .yes {
+      background: #ff4d6d;
+      color: white;
+    }
+
+    .no {
+      background: #ccc;
+      position: relative;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Balloons -->
+  <div class="balloon pink" style="left:10%; animation-delay:0s;"></div>
+  <div class="balloon red" style="left:30%; animation-delay:2s;"></div>
+  <div class="balloon pink" style="left:50%; animation-delay:4s;"></div>
+  <div class="balloon red" style="left:70%; animation-delay:1s;"></div>
+  <div class="balloon pink" style="left:90%; animation-delay:3s;"></div>
+
+  <!-- Card -->
+  <div class="card">
+    <img src="question.jpg" alt="Love Image">
+
+    <p>I just want to ask you something from my heart 💗</p>
+
+    <h2>Anirudh,</h2>
+    <h2>Will you be my Valentine? ❤️</h2>
+
+    <div class="buttons">
+      <button class="yes" onclick="goFinal()">Yes 💖</button>
+      <button class="no" id="noBtn">No 🙈</button>
+    </div>
+  </div>
+
+  <script>
+    const noBtn = document.getElementById("noBtn");
+
+    noBtn.addEventListener("mouseover", () => {
+      const x = Math.random() * 200 - 100;
+      const y = Math.random() * 200 - 100;
+      noBtn.style.transform = `translate(${x}px, ${y}px)`;
+    });
+
+    function goFinal() {
+      window.location.href = "final_v2.html";
+    }
+  </script>
+
+</body>
+</html>

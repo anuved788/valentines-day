@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Valentine’s Day </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Comic Sans MS', cursive;
+    }
+
+    body {
+      min-height: 100vh;
+      background: linear-gradient(to bottom, #ffe0ec, #ffd1dc);
+      overflow: hidden;
+      text-align: center;
+    }
+
+    /* BALLOONS */
+    .balloon {
+      position: absolute;
+      bottom: -150px;
+      width: 65px;
+      height: 85px;
+      border-radius: 50%;
+      opacity: 0.8;
+      animation: float 11s linear infinite;
+    }
+
+    .balloon::after {
+      content: "";
+      position: absolute;
+      width: 2px;
+      height: 40px;
+      background: #aaa;
+      left: 50%;
+      top: 85px;
+    }
+
+    .pink { background: #ffb6c1; }
+    .red { background: #ff6b6b; }
+
+    @keyframes float {
+      from { transform: translateY(0); }
+      to { transform: translateY(-120vh); }
+    }
+
+    /* CONTENT */
+    .content {
+      position: relative;
+      z-index: 10;
+      padding-top: 50px;
+    }
+
+    h1 {
+      font-size: 44px;
+      color: #e6005c;
+      margin-bottom: 25px;
+      text-shadow: 2px 2px 8px rgba(255,255,255,0.9);
+      animation: glow 1.6s infinite alternate;
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 10px #ff99b3; }
+      to { text-shadow: 0 0 25px #ff3366; }
+    }
+
+    /* DISCO GIF */
+    .disco img {
+      width: 90%;
+      max-width: 360px;
+      border-radius: 20px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.3);
+      margin-bottom: 20px;
+    }
+
+    /* TEXT */
+    .text {
+      font-size: 22px;
+      color: #333;
+      font-weight: 600;
+      padding: 0 15px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- BALLOONS -->
+  <div class="balloon pink" style="left:5%; animation-delay:0s;"></div>
+  <div class="balloon red" style="left:20%; animation-delay:2s;"></div>
+  <div class="balloon pink" style="left:40%; animation-delay:4s;"></div>
+  <div class="balloon red" style="left:60%; animation-delay:1s;"></div>
+  <div class="balloon pink" style="left:80%; animation-delay:3s;"></div>
+
+  <!-- CONTENT -->
+  <div class="content">
+    <h1>Happy Valentine’s Day </h1>
+
+    <div class="disco">
+      <img src="disco.gif" alt="Celebrate Love">
+    </div>
+
+    <div class="text">
+      I’m not easy to handle,<br>
+      but I am cute,<br>
+      so it kind of balances out 
+    </div>
+  </div>
+
+</body>
+</html>

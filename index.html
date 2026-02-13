@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Love 💕</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Segoe UI', cursive;
+    }
+
+    body {
+      margin: 0;
+      height: 100vh;
+      background: linear-gradient(180deg, #ffd6e5, #ffeef5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    /* floating hearts */
+    .heart {
+      position: absolute;
+      color: #ff5c8a;
+      font-size: 14px;
+      animation: floatUp 8s linear infinite;
+      opacity: 0.6;
+    }
+
+    @keyframes floatUp {
+      0% {
+        transform: translateY(100vh) scale(0.8);
+        opacity: 0;
+      }
+      30% {
+        opacity: 0.6;
+      }
+      100% {
+        transform: translateY(-10vh) scale(1.2);
+        opacity: 0;
+      }
+    }
+
+    .card {
+      background: #fff;
+      width: 280px;
+      border-radius: 18px;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+      text-align: center;
+      padding: 18px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 14px;
+    }
+
+    h2 {
+      margin: 14px 0 6px;
+      color: #ff4d88;
+      font-size: 20px;
+    }
+
+    p {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 14px;
+    }
+
+    .btn {
+      background: #ff4d88;
+      color: #fff;
+      padding: 10px 22px;
+      border-radius: 25px;
+      border: none;
+      font-size: 15px;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(255,77,136,0.4);
+    }
+
+    .btn:active {
+      transform: scale(0.95);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- floating hearts -->
+  <script>
+    for (let i = 0; i < 30; i++) {
+      let heart = document.createElement("div");
+      heart.className = "heart";
+      heart.innerHTML = "💗";
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.animationDuration = (6 + Math.random() * 4) + "s";
+      heart.style.fontSize = (12 + Math.random() * 14) + "px";
+      document.body.appendChild(heart);
+    }
+  </script>
+
+  <!-- main card -->
+  <div class="card">
+    <img src="couple.jpg" alt="couple">
+    <h2>My Love 💕</h2>
+    <p>You have a surprise waiting for you 💝</p>
+
+    <button class="btn" onclick="location.href='question.html'">
+      Open 💌
+    </button>
+  </div>
+
+</body>
+</html>
