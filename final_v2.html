@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Happy Valentine’s Day</title>
+
+<!-- Google Font for Cute Handwriting -->
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+<style>
+html,body{
+  margin:0;
+  padding:0;
+  height:100%;
+  font-family:'Pacifico', cursive;
+}
+
+/* Wallpaper background */
+body{
+  background: linear-gradient(180deg,#ffd1dc,#ffe6eb);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  overflow:hidden;
+}
+
+/* Floating hearts */
+.heart{
+  position:absolute;
+  bottom:-50px;
+  font-size:22px;
+  animation: floatUp 10s linear infinite;
+  opacity:0.7;
+}
+
+@keyframes floatUp{
+  0%{transform:translateY(0);opacity:0;}
+  10%{opacity:1;}
+  100%{transform:translateY(-120vh);opacity:0;}
+}
+
+/* Main card */
+.card{
+  background:#fff;
+  padding:30px 22px;
+  border-radius:20px;
+  text-align:center;
+  box-shadow:0 15px 30px rgba(0,0,0,0.15);
+  max-width:320px;
+  z-index:2;
+}
+
+/* Twinkling Valentine text */
+.title{
+  color:#e60026;
+  font-size:30px;
+  animation: twinkle 1.8s infinite alternate;
+  margin-bottom:18px;
+}
+
+@keyframes twinkle{
+  from{opacity:1; text-shadow:0 0 5px #ff5c8a;}
+  to{opacity:0.6; text-shadow:0 0 18px #ff1a4d;}
+}
+
+/* Disco gif */
+.disco{
+  width:100%;
+  border-radius:14px;
+  margin:15px 0;
+}
+
+/* Cute text */
+.text{
+  font-size:16px;
+  color:#444;
+}
+</style>
+</head>
+
+<body>
+
+<!-- Floating hearts -->
+<span class="heart" style="left:10%;"></span>
+<span class="heart" style="left:25%;animation-delay:2s;"></span>
+<span class="heart" style="left:40%;animation-delay:4s;"></span>
+<span class="heart" style="left:55%;animation-delay:1s;"></span>
+<span class="heart" style="left:70%;animation-delay:3s;"></span>
+<span class="heart" style="left:85%;animation-delay:5s;"></span>
+
+<div class="card">
+
+  <!-- RED HIGHLIGHT TEXT -->
+  <div class="title">Happy Valentine’s Day </div>
+
+  <!-- DISCO GIF -->
+  <img src="disco.gif" class="disco" alt="Love Disco">
+
+  <!-- TEXT -->
+  <div class="text">
+    I’m not easy to handle,<br>
+    but I am cute <br>
+    so it kind of balances out 
+  </div>
+
+</div>
+
+</body>
+</html>
